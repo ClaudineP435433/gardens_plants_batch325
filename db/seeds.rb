@@ -1,7 +1,21 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+puts 'Start seed'
+
+g = Garden.new(name: 'Garden of Batch 325', banner_url: 'https://images.pexels.com/photos/1040626/pexels-photo-1040626.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')
+g.save
+
+g1 = Garden.new(name: 'Garden of Balta', banner_url:'https://images.pexels.com/photos/462118/pexels-photo-462118.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')
+g1.save
+
+
+plant1 = Plant.new(name:'Cactus',
+                  image_url: 'https://images.pexels.com/photos/256355/pexels-photo-256355.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+                  garden: g)
+plant1.save
+plant2 = Plant.new(name:'Palmier',
+                  image_url: 'https://images.pexels.com/photos/1152359/pexels-photo-1152359.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+                  garden: g)
+plant2.save
+plant3 = Plant.new(name:'Cactus 2',
+                  image_url: 'https://images.pexels.com/photos/256355/pexels-photo-256355.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+                  garden: g)
+plant3.save
